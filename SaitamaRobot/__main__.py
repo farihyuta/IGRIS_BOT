@@ -248,7 +248,7 @@ def help_button(update, context):
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup([[
                     InlineKeyboardButton(
-                        text="Back", callback_data="help_back")
+                        text="バック", callback_data="help_back")
                 ]]))
 
         elif prev_match:
@@ -291,10 +291,10 @@ def get_help(update: Update, context: CallbackContext):
     if chat.type != chat.PRIVATE:
 
         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
+            "Contact me in PM.",
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton(
-                    text="Help",
+                    text="助けて",
                     url="t.me/{}?start=help".format(context.bot.username))
             ]]))
         return
